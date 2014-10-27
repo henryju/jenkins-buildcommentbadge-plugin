@@ -1,0 +1,16 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt" xmlns:local="local">
+  <l:layout norefresh="true" xmlns:local="local">
+    <st:include it="${it.owner}" page="sidepanel.jelly" />
+    <l:main-panel>
+      <h1>${%Comment}</h1>
+      <f:form method="post" action="saveComment" name="saveComment">
+        <f:entry title="${%Comment}">
+  			<f:textbox field="comment" value="${it.comment}" />
+		</f:entry>
+		<f:block>
+          <f:submit value="${%Save comment}" style="margin-top:1em;" />
+        </f:block>
+      </f:form>
+    </l:main-panel>
+  </l:layout>
+</j:jelly>

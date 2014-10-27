@@ -1,0 +1,11 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+	<j:if test="${it.plugin.activated}">
+	   <j:if test="${it.comment != null}">
+	    <a href="${link}comment/">
+		<img width="16" height="16"
+	     	 title="${it.comment}" alt="${it.displayName}"
+	     	 src="${rootURL}${it.icon}"/>
+	    </a>
+	   </j:if>
+	</j:if>
+</j:jelly>

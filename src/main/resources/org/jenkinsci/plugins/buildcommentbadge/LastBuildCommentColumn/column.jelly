@@ -1,0 +1,13 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+	<td>
+		<j:set var="comment" value="${it.getLastBuildComment(job)}" />
+		<j:choose>
+			<j:when test="${comment != null}">
+			<span>${comment}</span>
+			</j:when>
+			<j:otherwise>
+				<span>${%LastBuildCommentColumn.NoComment}</span>
+			</j:otherwise>
+		</j:choose>
+	</td>
+</j:jelly>
